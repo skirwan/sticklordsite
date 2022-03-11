@@ -44,7 +44,7 @@ function mtScore(entry_id) {
     if (!xh) return false;
 
     DOM.addClassName( span, 'scoring-pending' );
-    var url = 'http://sticklord.com/MTP/mt-cp.cgi';
+    var url = 'https://sticklord.com/MTP/mt-cp.cgi';
     xh.open('POST', url, true);
     xh.onreadystatechange = function() {
         if ( xh.readyState == 4 ) {
@@ -79,7 +79,7 @@ function mtUpdateScores() {
     var xh = mtGetXmlHttp();
     if (!xh) return false;
 
-    var url = 'http://sticklord.com/MTP/mt-cp.cgi';
+    var url = 'https://sticklord.com/MTP/mt-cp.cgi';
     xh.open('POST', url, true);
     xh.onreadystatechange = function() {
         if ( xh.readyState == 4 ) {
@@ -217,7 +217,7 @@ function favorite(evt, entry_id, score_span) {
     var src = evt.target || evt.srcElement;
     if (src) detachEvent(src, 'click', arguments.callee);
 
-    var url = 'http://sticklord.com/MTP/mt-cp.cgi';
+    var url = 'https://sticklord.com/MTP/mt-cp.cgi';
     xh.open('POST', url, true);
     xh.onreadystatechange = function() {
         if ( xh.readyState == 4 ) {
@@ -231,7 +231,7 @@ function favorite(evt, entry_id, score_span) {
     xh.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
     xh.send( '__mode=vote&blog_id=2&f=scored,sum&jsonp=favorite_cb&id=' + entry_id);
     var span = document.getElementById(score_span);
-    if (span) span.innerHTML = '<img src="http://sticklord.com/MTP/mt-static/images/indicator.white.gif" height="10" width="10" alt="favoriting..." />';
+    if (span) span.innerHTML = '<img src="/MTP/mt-static/images/indicator.white.gif" height="10" width="10" alt="favoriting..." />';
 
 }
 
@@ -242,7 +242,7 @@ function script_follow(id) {
     if (!u || !u.name) return;
     var xh = mtGetXmlHttp();
     if (!xh) return false;
-    xh.open('POST', 'http://sticklord.com/MTP/mt-cp.cgi', true);
+    xh.open('POST', 'https://sticklord.com/MTP/mt-cp.cgi', true);
     xh.onreadystatechange = function() {
         if ( xh.readyState == 4 ) {
             if (xh.status && ( xh.status != 200 ) ) {
@@ -256,7 +256,7 @@ function script_follow(id) {
     xh.send( '__mode=follow&id=' + id + '&magic_token=' + u.sid + '&jsonp=follow' );
     DOM.addClassName( 'following_' + id + '_else', 'hidden');
     var span = document.getElementById('following-status');
-    if (span) span.innerHTML = '<img src="http://sticklord.com/MTP/mt-static/images/indicator.white.gif" height="10" width="10" alt="Following..." />';
+    if (span) span.innerHTML = '<img src="/MTP/mt-static/images/indicator.white.gif" height="10" width="10" alt="Following..." />';
 }
 
 function script_leave(id) {
@@ -264,7 +264,7 @@ function script_leave(id) {
     if (!u || !u.name) return;
     var xh = mtGetXmlHttp();
     if (!xh) return false;
-    xh.open('POST', 'http://sticklord.com/MTP/mt-cp.cgi', true);
+    xh.open('POST', 'https://sticklord.com/MTP/mt-cp.cgi', true);
     xh.onreadystatechange = function() {
         if ( xh.readyState == 4 ) {
             if (xh.status && ( xh.status != 200 ) ) {
@@ -278,7 +278,7 @@ function script_leave(id) {
     xh.send( '__mode=leave&id=' + id + '&magic_token=' + u.sid + '&jsonp=leave' );
     DOM.addClassName('following_' + id, "hidden");
     var span = document.getElementById('following-status');
-    if (span) span.innerHTML = '<img src="http://sticklord.com/MTP/mt-static/images/indicator.white.gif" height="10" width="10" alt="Leaving..." />';
+    if (span) span.innerHTML = '<img src="/MTP/mt-static/images/indicator.white.gif" height="10" width="10" alt="Leaving..." />';
 }
 
 function follow(user_info) {
@@ -732,7 +732,7 @@ function mtFetchUser(cb) {
         mtFetchedUser = true;
         var script = document.createElement('script');
         var ts = new Date().getTime();
-        script.src = 'http://sticklord.com/MTP/mt-comments.cgi?__mode=session_js&blog_id=2&jsonp=' + cb + '&ts=' + ts;
+        script.src = 'https://sticklord.com/MTP/mt-comments.cgi?__mode=session_js&blog_id=2&jsonp=' + cb + '&ts=' + ts;
         (document.getElementsByTagName('head'))[0].appendChild(script);
     }
 }
@@ -868,7 +868,7 @@ mtAttachEvent('usersignin', mtUserOnLoad);
 function mtSignIn() {
     var doc_url = document.URL;
     doc_url = doc_url.replace(/#.+/, '');
-    var url = 'http://sticklord.com/MTP/mt-cp.cgi?__mode=login&blog_id=2';
+    var url = 'https://sticklord.com/MTP/mt-cp.cgi?__mode=login&blog_id=2';
     if (is_preview) {
         if ( document['comments_form'] ) {
             var entry_id = document['comments_form'].entry_id.value;
@@ -913,7 +913,7 @@ function mtSignOut(entry_id) {
     mtClearUser();
     var doc_url = document.URL;
     doc_url = doc_url.replace(/#.+/, '');
-    var url = 'http://sticklord.com/MTP/mt-cp.cgi?__mode=logout&blog_id=2';
+    var url = 'https://sticklord.com/MTP/mt-cp.cgi?__mode=logout&blog_id=2';
     if (is_preview) {
         if ( document['comments_form'] ) {
             var entry_id = document['comments_form'].entry_id.value;
@@ -960,7 +960,7 @@ function mtShowGreeting() {
         } else {
             var user_link;
             if ( u.is_author ) {
-                user_link = '<a href="http://sticklord.com/MTP/mt-cp.cgi?__mode=edit&amp;return_to=' + encodeURIComponent(document.URL) + '&amp;blog_id=2';
+                user_link = '<a href="/MTP/mt-cp.cgi?__mode=edit&amp;return_to=' + encodeURIComponent(document.URL) + '&amp;blog_id=2';
                 user_link += '">' + u.name + '</a>';
             } else {
                 // registered user, but not a user with posting rights

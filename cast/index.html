@@ -17,10 +17,10 @@
         
         
         
-        <link rel="stylesheet" href="http://sticklord.com/styles.css" type="text/css" />
-        <link rel="alternate" type="application/atom+xml" title="Atom" href="http://sticklord.com/atom.xml" />
-        <link rel="start" href="http://sticklord.com/" title="Home" />
-        <script type="text/javascript" src="http://sticklord.com/mt.js"></script>
+        <link rel="stylesheet" href="/styles.css" type="text/css" />
+        <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+        <link rel="start" href="/" title="Home" />
+        <script type="text/javascript" src="/mt.js"></script>
         
     
 
@@ -40,14 +40,14 @@
                 <div id="header-inner">
                     <div id="header-content">
 
-                        <div id="header-name"><a href="http://sticklord.com/" accesskey="1">StickLord.com</a></div>
+                        <div id="header-name"><a href="/" accesskey="1">StickLord.com</a></div>
     
 
                         <div id="header-menu">
     <ul>
 
-        <li><a href="http://sticklord.com/">Home</a></li>
-        <li><a href="http://sticklord.com/archives.html">Archives</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/archives.html">Archives</a></li>
 
     </ul>
 </div>
@@ -79,7 +79,7 @@ function mtUpdateSignInWidget(u) {
         var url;
         if (u.is_authenticated) {
             if (u.is_author) {
-                url = 'http://sticklord.com/MTP/mt-cp.cgi?__mode=view&blog_id=2';
+                url = 'https://sticklord.com/MTP/mt-cp.cgi?__mode=view&blog_id=2';
                 url += '&static=' + encodeURIComponent( location.href );
             } else {
                 url = u.url;
@@ -94,7 +94,7 @@ function mtUpdateSignInWidget(u) {
         else
             content += 'You are signed in as ' + u.name + '';
         if (u.is_author)
-            content += separator + '<a href="http://sticklord.com/MTP/mt-cp.cgi?__mode=edit&blog_id=2&return_to=' + encodeURIComponent(document.URL) + '">Edit profile</a>';
+            content += separator + '<a href="/MTP/mt-cp.cgi?__mode=edit&blog_id=2&return_to=' + encodeURIComponent(document.URL) + '">Edit profile</a>';
         
         content += separator + '<a href="javascript:void(0)" onclick="return mtSignOutOnClick()">Sign out</a>';
         
@@ -102,7 +102,7 @@ function mtUpdateSignInWidget(u) {
         content = 'You do not have permission to sign in to this blog.';
     } else {
         content = '<a href="javascript:void(0)" onclick="return mtSignInOnClick(\'signin-widget-content\')">Sign In</a>';
-        content += separator + 'Not a member? <a href="http://sticklord.com/MTP/mt-cp.cgi?__mode=register&blog_id=2&return_to=' + encodeURIComponent(document.URL) + '">Register</a>';
+        content += separator + 'Not a member? <a href="/MTP/mt-cp.cgi?__mode=register&blog_id=2&return_to=' + encodeURIComponent(document.URL) + '">Register</a>';
     }
     el.innerHTML = content;
 }
@@ -138,13 +138,13 @@ Recently in <em>Cast</em> Category
 
 
 <div class="content-nav">
-    <div class="create-entry"><a href="http://sticklord.com/create-entry.html">Create Entry</a></div>
+    <div class="create-entry"><a href="/create-entry.html">Create Entry</a></div>
 
 
-    <a href="http://sticklord.com/">Blog Home</a> <span class="separator">|</span> 
+    <a href="/">Blog Home</a> <span class="separator">|</span> 
 
 
-    <a href="http://sticklord.com/archives.html">Archives</a>
+    <a href="/archives.html">Archives</a>
 
 
 </div>
@@ -191,7 +191,7 @@ Recently in <em>Cast</em> Category
     
         
         
-            <li><a href="http://sticklord.com/cast/stylunk/">Stylunk (1)</a>
+            <li><a href="/cast/stylunk/">Stylunk (1)</a>
         
         
             </li>
@@ -211,59 +211,59 @@ Recently in <em>Cast</em> Category
 
 
     <div class="widget-archive-monthly widget-archive widget">
-    <h3 class="widget-header">Monthly <a href="http://sticklord.com/archives.html">Archives</a></h3>
+    <h3 class="widget-header">Monthly <a href="/archives.html">Archives</a></h3>
     <div class="widget-content">
         <ul>
         
-            <li><a href="http://sticklord.com/2009/02/">February 2009 (1)</a></li>
+            <li><a href="/2009/02/">February 2009 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2008/10/">October 2008 (1)</a></li>
+            <li><a href="/2008/10/">October 2008 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2008/08/">August 2008 (1)</a></li>
+            <li><a href="/2008/08/">August 2008 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2008/06/">June 2008 (1)</a></li>
+            <li><a href="/2008/06/">June 2008 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2008/04/">April 2008 (2)</a></li>
+            <li><a href="/2008/04/">April 2008 (2)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2008/03/">March 2008 (1)</a></li>
+            <li><a href="/2008/03/">March 2008 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2008/02/">February 2008 (1)</a></li>
+            <li><a href="/2008/02/">February 2008 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2008/01/">January 2008 (2)</a></li>
+            <li><a href="/2008/01/">January 2008 (2)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2007/07/">July 2007 (3)</a></li>
+            <li><a href="/2007/07/">July 2007 (3)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2007/05/">May 2007 (1)</a></li>
+            <li><a href="/2007/05/">May 2007 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2007/02/">February 2007 (1)</a></li>
+            <li><a href="/2007/02/">February 2007 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2006/10/">October 2006 (1)</a></li>
+            <li><a href="/2006/10/">October 2006 (1)</a></li>
         
     
         
-            <li><a href="http://sticklord.com/2006/09/">September 2006 (2)</a></li>
+            <li><a href="/2006/09/">September 2006 (2)</a></li>
         
         </ul>
     </div>
@@ -276,7 +276,7 @@ Recently in <em>Cast</em> Category
 <div class="widget-syndication widget">
     <div class="widget-content">
         <ul>
-            <li><img src="http://sticklord.com/MTP/mt-static/images/status_icons/feed.gif" alt="Subscribe to feed" width="9" height="9" /> <a href="http://sticklord.com/atom.xml">Subscribe to this blog's feed</a></li>
+            <li><img src="/MTP/mt-static/images/status_icons/feed.gif" alt="Subscribe to feed" width="9" height="9" /> <a href="/atom.xml">Subscribe to this blog's feed</a></li>
 
         </ul>
     </div>
@@ -302,7 +302,7 @@ Recently in <em>Cast</em> Category
         
     
 
-        <p>Find recent content on the <a href="http://sticklord.com/">main index</a> or look in the <a href="http://sticklord.com/archives.html">archives</a> to find all content.</p>
+        <p>Find recent content on the <a href="/">main index</a> or look in the <a href="/archives.html">archives</a> to find all content.</p>
     </div>
 </div>
 
