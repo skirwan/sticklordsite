@@ -1,0 +1,50 @@
+.header_link {
+	float:left;
+	border:1px solid #999;
+	background:#EEE;
+	padding:0;
+	margin:0;
+}
+.header_link {
+	padding:5px;
+	margin:0;
+	display:block;
+}
+.container {
+	border:1px solid #ddd;
+	width:400px;
+	padding:10px;
+}
+.label {
+	font-weight:bold;
+	margin-bottom:0.5em;
+	margin-top:1em;
+}
+.field {
+	margin-bottom:10px;
+}
+.field input {
+	display:block;
+	width:390px;
+}
+
+.field textarea {
+	display:block;
+	width:390px;
+}
+
+.radiofield {
+	margin-bottom:10px;
+}
+
+.submit {
+	display:block;
+	margin:0;
+	margin-bottom:-10px;
+	margin-top:20px;
+}
+
+.static_field {
+	margin-left:1em;
+	margin-bottom:0.5em;
+}
