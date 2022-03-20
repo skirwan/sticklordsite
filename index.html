@@ -11,21 +11,12 @@
 	<link href="https://www.apple.com/library/quicktime/stylesheets/qtp_library.css" rel="StyleSheet" type="text/css" />
 
 	</head>
-<script language="javascript" src="/swf2js.js"></script>
+	<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	<script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
-	<script type="text/javascript">
-	//<!--
-		$(document).ready(function(){
-			if(navigator.userAgent.indexOf('Safari')!=-1){
-				$('#search_label').hide();
-			}
-		})
-	//-->
-	</script>
+
 	<body>
 		<div id="body">
 			<div id="header">
-<a href="/atom.xml" id="rss_link"><img src="/images/rss_logo.gif" /></a>
 				<a href="/" id="header_logo"><span>StickLord.com<span></a>
 				<ul>
 
@@ -52,24 +43,20 @@
 				<div class="canvas">
 					<h1><a href="/2009/02/final-fentasy.html" alt="Permalink" title="Permalink" style="text-decoration:none"><span style="float:right;">&#167;</span><span style="color:black;text-decoration:none;">Final Fentasy</span></a></h1>
 					<div class="letterbox">
-
-
-
-
-<div id="no_flash" style="text-align:center;color:white;margin:20px;">
-<b>You don't have Flash</b>
-<p>Personally, I applaud your dedication to not installing crap on your system.  Unfortunately it's rather in conflict with <i>our</i> commitment to using whatever tools best allow us to concentrate silliness and squirt it through the intertubes directly into your brain.</p>
-</div>
-<script type="text/javascript">
-swf2js.load('https://sticklord.com/videos/finalfentasy.swf',{width:"500",height:"470"});
-</script>
-
-
-
+						<div id="flash_container"></div>
+						<script>
+							window.RufflePlayer = window.RufflePlayer || {};
+							window.addEventListener("load", (event) => {
+								const ruffle = window.RufflePlayer.newest();
+								const player = ruffle.createPlayer();
+								const container = document.getElementById("flash_container");
+								container.appendChild(player);
+								player.load("/videos/movie.swf");
+								// 500x470
+							});
+						</script>
 					</div>
-
-<p class="instructions">To Play: [SPACE], [UP], [DOWN]</p>
-
+					<p class="instructions">To Play: [SPACE], [UP], [DOWN]</p>
 				</div>
 				<div class="description">
 					<p>With the release of the Clan Lord development tools, Sticktendo is proud to announce this bold re-imagining of the world of Shan Deral. Featuring a host of popular Clan Lord characters and also Hoggle, Final Fentasy is guaranteed to delight!</p>
